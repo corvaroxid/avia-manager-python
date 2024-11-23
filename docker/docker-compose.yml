@@ -1,0 +1,13 @@
+services:
+  pg-16:
+    image: bitnami/postgresql:16
+    ports:
+      - '9432:5432'
+#    volumes:
+#      - '../data/pg:/bitnami/postgresql'
+    environment:
+      - 'ALLOW_EMPTY_PASSWORD=yes'
+
+volumes:
+  postgresql_data:
+    driver: local
